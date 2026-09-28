@@ -1,4 +1,4 @@
-# MEHAK — pure oil attar
+# MEHAK, pure oil attar
 
 A demo website for an invented attar brand, designed and built by Abdul Wasay Shaikh.
 
