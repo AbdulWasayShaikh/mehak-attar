@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEHAK | Pure oil attar</title>
+<meta name="description" content="Pure oil attar, distilled in small batches from flowers, earth and wood. No alcohol. One drop lasts the whole day. Delivered across Pakistan.">
+<meta name="theme-color" content="#0E0A07">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230E0A07'/%3E%3Cpath d='M50 14C64 34 72 48 72 62a22 22 0 0 1-44 0c0-14 8-28 22-48z' fill='%23C9933A'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MEHAK | Pure oil attar">
+<meta property="og:description" content="One drop. The whole day. Pure oil attar with no alcohol.">
+<meta property="og:url" content="https://mehak-attar.netlify.app/">
+<meta property="og:image" content="https://mehak-attar.netlify.app/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js');
+setTimeout(function(){document.documentElement.classList.add('shown')},3500);</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="head" id="head">
+  <a class="logo" href="#top" aria-label="MEHAK, back to top">MEHAK</a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <a href="#collection">The oils</a>
+    <a href="#hours">On the skin</a>
+    <a href="#craft">How it is made</a>
+    <a href="#finder">Find yours</a>
+  </nav>
+  <div class="tools">
+    <a class="btn btn-sm" href="#set">Sample set</a>
+    <button class="icon" type="button" id="bagBtn" aria-label="Open bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8h12l-1.2 12H7.2z"/><path d="M9.5 8a2.5 2.5 0 0 1 5 0"/></svg>
+      <span class="badge" id="bagCount" hidden>0</span>
+    </button>
+    <button class="icon burger" type="button" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ================= 1. THE FILM: scroll moves the camera ================= -->
+<section class="hero" id="top" aria-label="MEHAK, pure oil attar">
+  <div class="stage">
+    <canvas class="scene" id="scene" aria-hidden="true"></canvas>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="band b1" data-a="0" data-b="0.3">
+      <h1 class="wordmark" data-split>MEHAK</h1>
+      <p class="sub">One drop. The whole day.</p>
+    </div>
+    <div class="band b2" data-a="0.36" data-b="0.64">
+      <h2 class="hl" data-split>Pure oil. No alcohol.</h2>
+      <p class="sub">Nothing burns off in the first hour. It opens slowly, and it stays.</p>
+    </div>
+    <div class="band b3 settle" data-a="0.72" data-b="1">
+      <h2 class="hl hl-xl" data-split>Wear it close.</h2>
+      <p class="sub ks">Six attars, distilled in small batches from flowers, earth and wood.</p>
+      <div class="cta-row kb">
+        <a class="btn" href="#collection">See the six oils</a>
+        <a class="btn ghost" href="#set">Try all six first</a>
+      </div>
+    </div>
+
+    <div class="loader" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" class="ring-bg"/><circle cx="24" cy="24" r="20" class="ring-fg"/></svg></div>
+    <div class="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </div>
+</section>
+
+<!-- ================= 2. THE IDEA: words light up as you read ================= -->
+<section class="idea" id="idea" aria-labelledby="idea-h">
+  <div class="idea-pin">
+    <p class="eyebrow">Why oil</p>
+    <h2 class="idea-text" id="idea-h" data-words>Perfume is mostly alcohol. It hits hard and it is gone by lunch. Attar is pure oil, so it sits on the skin and opens slowly, and at night it is still there.</h2>
+    <dl class="facts" data-reveal>
+      <div><dt><span data-count="8">8</span>+</dt><dd>hours on skin</dd></div>
+      <div><dt><span data-count="0">0</span>%</dt><dd>alcohol</dd></div>
+      <div><dt><span data-count="21">21</span></dt><dd>days per batch</dd></div>
+      <div><dt><span data-count="1">1</span></dt><dd>drop is enough</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= 3. THE OILS: a horizontal walk ================= -->
+<section class="collection" id="collection" aria-labelledby="col-h">
+  <div class="col-pin">
+    <div class="col-head">
+      <div>
+        <p class="eyebrow">The six oils</p>
+        <h2 class="h2" id="col-h">One bottle for every <em>mood.</em></h2>
+      </div>
+      <div class="col-arrows">
+        <button class="round" type="button" id="colPrev" aria-label="Previous oils"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 6l-6 6 6 6"/></svg></button>
+        <button class="round" type="button" id="colNext" aria-label="Next oils"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="col-viewport" id="colViewport" tabindex="0" aria-label="The six oils, scroll sideways">
+      <div class="col-track" id="colTrack">
+
+        <article class="oil" style="--oil:#C0716A">
+          <div class="oil-media"><img src="assets/img/attar-gulab.jpg" alt="Gulab attar in a cut crystal bottle with a rose petal" width="760" height="1362" loading="lazy" decoding="async"></div>
+          <div class="oil-body">
+            <p class="oil-idx">01</p>
+            <h3>Gulab</h3>
+            <p class="ur" lang="ur">گلاب</p>
+            <p class="oil-say">A rose garden after the rain. Soft, green at the edges, never sweet.</p>
+            <ul class="notes"><li><span>Top</span>Pink pepper, rose leaf</li><li><span>Heart</span>Rose petal</li><li><span>Base</span>White musk</li></ul>
+            <div class="oil-foot"><b>Rs 4,200 <small>6 ml</small></b><button class="add" type="button" data-add data-name="Gulab" data-price="4200" data-img="attar-gulab">Add to bag</button></div>
+          </div>
+        </article>
+
+        <article class="oil" style="--oil:#D8BE72">
+          <div class="oil-media"><img src="assets/img/motia.jpg" alt="Motia attar with jasmine buds beside the bottle" width="700" height="1254" loading="lazy" decoding="async"></div>
+          <div class="oil-body">
+            <p class="oil-idx">02</p>
+            <h3>Motia</h3>
+            <p class="ur" lang="ur">موتیا</p>
+            <p class="oil-say">The jasmine garland sold at the signal at night, and the warm evening around it.</p>
+            <ul class="notes"><li><span>Top</span>Green leaf</li><li><span>Heart</span>Motia, jasmine</li><li><span>Base</span>Sandalwood</li></ul>
+            <div class="oil-foot"><b>Rs 4,200 <small>6 ml</small></b><button class="add" type="button" data-add data-name="Motia" data-price="4200" data-img="motia">Add to bag</button></div>
+          </div>
+        </article>
+
+        <article class="oil" style="--oil:#8A5A3C">
+          <div class="oil-media"><img src="assets/img/attar-mitti.jpg" alt="Mitti attar beside baked clay and vetiver root" width="760" height="1362" loading="lazy" decoding="async"></div>
+          <div class="oil-body">
+            <p class="oil-idx">03</p>
+            <h3>Mitti</h3>
+            <p class="ur" lang="ur">مٹی</p>
+            <p class="oil-say">The first rain on dry ground. Clay, heat, and the whole city exhaling.</p>
+            <ul class="notes"><li><span>Top</span>Wet stone</li><li><span>Heart</span>Baked clay</li><li><span>Base</span>Vetiver root</li></ul>
+            <div class="oil-foot"><b>Rs 3,800 <small>6 ml</small></b><button class="add" type="button" data-add data-name="Mitti" data-price="3800" data-img="attar-mitti">Add to bag</button></div>
+          </div>
+        </article>
+
+        <article class="oil" style="--oil:#8E9A56">
+          <div class="oil-media"><img src="assets/img/khus.jpg" alt="Khus attar with dry khus roots and an oil lamp" width="700" height="1254" loading="lazy" decoding="async"></div>
+          <div class="oil-body">
+            <p class="oil-idx">04</p>
+            <h3>Khus</h3>
+            <p class="ur" lang="ur">خس</p>
+            <p class="oil-say">Cool, green and grassy. The one to wear in May when everything else feels heavy.</p>
+            <ul class="notes"><li><span>Top</span>Lime peel, mint</li><li><span>Heart</span>Khus grass</li><li><span>Base</span>Cedar</li></ul>
+            <div class="oil-foot"><b>Rs 3,800 <small>6 ml</small></b><button class="add" type="button" data-add data-name="Khus" data-price="3800" data-img="khus">Add to bag</button></div>
+          </div>
+        </article>
+
+        <article class="oil" style="--oil:#C9822E">
+          <div class="oil-media"><img src="assets/img/attar-amber.jpg" alt="Amber Shaam attar with saffron threads and amber resin" width="760" height="1362" loading="lazy" decoding="async"></div>
+          <div class="oil-body">
+            <p class="oil-idx">05</p>
+            <h3>Amber Shaam</h3>
+            <p class="ur" lang="ur">عنبر شام</p>
+            <p class="oil-say">Saffron, resin and a little vanilla. Warm like a shawl on the first cold night.</p>
+            <ul class="notes"><li><span>Top</span>Saffron</li><li><span>Heart</span>Amber resin</li><li><span>Base</span>Vanilla, benzoin</li></ul>
+            <div class="oil-foot"><b>Rs 5,400 <small>6 ml</small></b><button class="add" type="button" data-add data-name="Amber Shaam" data-price="5400" data-img="attar-amber">Add to bag</button></div>
+          </div>
+        </article>
+
+        <article class="oil" style="--oil:#5A3420">
+          <div class="oil-media"><img src="assets/img/attar-oudh.jpg" alt="Oudh Purana attar, nearly black, with agarwood chips and smoke" width="760" height="1362" loading="lazy" decoding="async"></div>
+          <div class="oil-body">
+            <p class="oil-idx">06</p>
+            <h3>Oudh Purana</h3>
+            <p class="ur" lang="ur">عود پرانا</p>
+            <p class="oil-say">Real aged oud. Smoke and leather first, then honey and wood for hours.</p>
+            <ul class="notes"><li><span>Top</span>Smoke, leather</li><li><span>Heart</span>Aged oud</li><li><span>Base</span>Honey, dry wood</li></ul>
+            <div class="oil-foot"><b>Rs 9,500 <small>6 ml</small></b><button class="add" type="button" data-add data-name="Oudh Purana" data-price="9500" data-img="attar-oudh">Add to bag</button></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+    <div class="col-bar" aria-hidden="true"><i id="colBar"></i></div>
+  </div>
+</section>
+
+<!-- ================= 4. ON THE SKIN: how one drop changes over a day ================= -->
+<section class="hours" id="hours" aria-labelledby="hours-h">
+  <div class="hours-pin">
+    <div class="hours-media">
+      <img src="assets/img/motia.jpg" alt="" width="700" height="1254" loading="lazy" decoding="async" id="hoursImg">
+      <div class="hours-glow" id="hoursGlow" aria-hidden="true"></div>
+    </div>
+    <div class="hours-copy">
+      <p class="eyebrow">On the skin</p>
+      <h2 class="h2" id="hours-h">One drop, <em>eight hours.</em></h2>
+      <p class="lede">Attar is not one smell. It changes as your skin warms it. Move the dial to see how.</p>
+
+      <div class="dial" role="group" aria-label="Hours after wearing">
+        <input type="range" id="hourRange" min="0" max="3" step="1" value="0" aria-label="Hours after wearing">
+        <div class="dial-marks"><button type="button" data-hour="0">0 h</button><button type="button" data-hour="1">1 h</button><button type="button" data-hour="2">4 h</button><button type="button" data-hour="3">8 h</button></div>
+      </div>
+
+      <div class="phase" id="phase" aria-live="polite">
+        <p class="phase-when" id="phaseWhen">The first minute</p>
+        <h3 class="phase-name" id="phaseName">Bright and close</h3>
+        <p class="phase-say" id="phaseSay">The top notes lift first: pepper, citrus, green leaf. Stronger now than it will ever be again, and only for a few minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. THE CRAFT: a line runs down the steps ================= -->
+<section class="craft" id="craft" aria-labelledby="craft-h">
+  <div class="wrap">
+    <div class="craft-head">
+      <p class="eyebrow">How it is made</p>
+      <h2 class="h2" id="craft-h">Slow, <em>on purpose.</em></h2>
+      <p class="lede">The old way. Copper, a low fire and a lot of waiting. Three weeks from flower to bottle.</p>
+    </div>
+    <div class="craft-grid">
+    <ol class="steps">
+      <li class="steps-line" aria-hidden="true"><i></i></li>
+      <li class="step" data-reveal>
+        <span class="step-n">01</span>
+        <div><h3>Picked before sunrise</h3><p>Flowers hold the most oil in the early morning. They are picked before the heat and reach the copper the same day.</p></div>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-n">02</span>
+        <div><h3>Distilled over a low fire</h3><p>Steam carries the scent into a base of sandalwood oil. No alcohol and nothing added to push it louder.</p></div>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-n">03</span>
+        <div><h3>Rested for two weeks</h3><p>The oil settles and rounds out. Then every bottle is filled, sealed and checked by hand.</p></div>
+      </li>
+    </ol>
+    <div class="craft-media"><img src="assets/img/khus.jpg" alt="Khus attar beside an oil lamp and dry khus roots" loading="lazy" decoding="async"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. GALLERY: frames open like a curtain ================= -->
+<section class="gallery" aria-label="Gallery">
+  <div class="gal-grid">
+    <figure class="tile t1"><img src="assets/img/attar-oudh.jpg" alt="Oudh Purana with smoke rising beside it" loading="lazy" decoding="async"></figure>
+    <figure class="tile t2"><img src="assets/img/attar-mitti.jpg" alt="Mitti attar with smoke rising behind it" loading="lazy" decoding="async"></figure>
+    <figure class="tile t3"><img src="assets/img/occ-wedding.jpg" alt="Gulab attar with a rose petal" loading="lazy" decoding="async"></figure>
+    <figure class="tile t4"><img src="assets/img/khus.jpg" alt="Khus attar beside an oil lamp" loading="lazy" decoding="async"></figure>
+    <figure class="tile t5"><img src="assets/img/attar-amber.jpg" alt="Amber Shaam with saffron" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- ================= 7. FIND YOURS ================= -->
+<section class="finder" id="finder" aria-labelledby="finder-h">
+  <div class="wrap finder-grid">
+    <form class="fq" id="finderForm" onsubmit="return false">
+      <p class="eyebrow">Not sure where to start</p>
+      <h2 class="h2" id="finder-h">Two <em>questions.</em></h2>
+      <fieldset><legend>When will you wear it?</legend>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="when" value="day" checked><span>In the day</span></label>
+          <label class="pill"><input type="radio" name="when" value="night"><span>In the evening</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>Which one pulls you in?</legend>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="like" value="flowers" checked><span>Flowers</span></label>
+          <label class="pill"><input type="radio" name="like" value="earth"><span>Rain and earth</span></label>
+          <label class="pill"><input type="radio" name="like" value="warm"><span>Sweet and warm</span></label>
+          <label class="pill"><input type="radio" name="like" value="smoke"><span>Smoke and wood</span></label>
+        </div>
+      </fieldset>
+    </form>
+    <div class="fr" id="fr" aria-live="polite">
+      <div class="fr-media"><img id="frImg" src="assets/img/attar-gulab.jpg" alt="" width="760" height="1362" loading="lazy" decoding="async"></div>
+      <div class="fr-copy">
+        <span class="eyebrow">Start with</span>
+        <h3 id="frName">Gulab</h3>
+        <p id="frWhy">Soft rose with green edges. Light enough for the office, and it still lasts until you get home.</p>
+        <button class="btn" type="button" id="frAdd" data-add data-name="Gulab" data-price="4200" data-img="attar-gulab">Add Gulab to bag</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. VOICES ================= -->
+<section class="voices" aria-labelledby="voices-h">
+  <div class="wrap">
+    <p class="eyebrow">Said to us</p>
+    <h2 class="h2" id="voices-h">Not <em>by us.</em></h2>
+    <div class="quotes">
+      <blockquote data-reveal><p>I put Oudh Purana on at nine in the morning. My brother asked what I was wearing at dinner.</p><cite>Hamza, Lahore</cite></blockquote>
+      <blockquote data-reveal><p>Every perfume gives me a headache. This is the first thing I can wear all day.</p><cite>Sana, Karachi</cite></blockquote>
+      <blockquote data-reveal><p>I ordered the sample set to be safe. Now I have three full bottles.</p><cite>Ali, Islamabad</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. THE SAMPLE SET ================= -->
+<section class="set" id="set" aria-labelledby="set-h">
+  <div class="set-bg" aria-hidden="true"><img src="assets/img/hero-wide.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap set-grid">
+    <div class="set-copy">
+      <p class="eyebrow">Try before you choose</p>
+      <h2 class="h2 big" id="set-h">All six, <em>one box.</em></h2>
+      <p class="lede">Six 1 ml vials, enough to wear each one for a few days. The Rs 2,400 comes off your first full bottle.</p>
+      <ul class="ticks">
+        <li>Delivery across Pakistan in 3 to 5 days</li>
+        <li>Cash on delivery</li>
+        <li>Wrapped in cotton, in a wooden box</li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn btn-lg" type="button" data-add data-name="Sample set" data-price="2400" data-img="attar-amber">Add the set, Rs 2,400</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-word" aria-hidden="true">MEHAK</div>
+  <div class="foot-card">
+    <div class="f-grid">
+      <div>
+        <b class="f-logo">MEHAK</b>
+        <p>Pure oil attar in small batches.</p>
+        <form id="newsForm" novalidate>
+          <label class="sr" for="newsMail">Email address</label>
+          <input id="newsMail" type="email" inputmode="email" placeholder="Get the next batch first" required>
+          <button class="btn" type="submit">Join</button>
+        </form>
+        <p class="micro" id="newsNote">One email a month. Demo form: nothing is sent yet.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="#collection">The six oils</a></li><li><a href="#set">Sample set</a></li><li><a href="#finder">Find yours</a></li></ul></div>
+      <div><h4>Learn</h4><ul><li><a href="#hours">On the skin</a></li><li><a href="#craft">How it is made</a></li><li><a href="#idea">Why oil</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li><p>Zamzama, Karachi</p></li><li><p>Mon to Sat, 12 pm to 10 pm</p></li></ul></div>
+    </div>
+    <div class="f-base">
+      <span>&copy; <span id="yr">2026</span> MEHAK</span>
+      <span>Demo website with AI-generated visuals, designed and built by Abdul Wasay Shaikh</span>
+    </div>
+  </div>
+</footer>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="bag" id="bag" aria-label="Your bag" aria-hidden="true">
+  <div class="bag-head">
+    <h3>Your bag</h3>
+    <button class="icon" type="button" id="bagClose" aria-label="Close bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="bag-body" id="bagBody"><p class="empty">Your bag is empty. The sample set is a good start.</p></div>
+  <div class="bag-foot">
+    <div class="row"><span>Subtotal</span><b id="bagTotal">Rs 0</b></div>
+    <button class="btn block" type="button" id="checkout">Checkout</button>
+    <p class="micro" id="checkoutNote">Demo store: checkout is not connected to payments.</p>
+  </div>
+</aside>
+
+<script id="film" type="application/json">{"video":{"src":"assets/film/hero.mp4","bytes":6148437,"lite":"assets/film/hero-lite.mp4","liteBytes":1188818,"poster":"assets/film/poster.jpg","w":1600,"h":900}}</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/hero.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
