@@ -6,7 +6,8 @@
   const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
   const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const money = n => 'Rs ' + n.toLocaleString('en-PK');
+  const PKR = new Intl.NumberFormat('en-PK');
+  const money = n => 'Rs ' + PKR.format(n);
   const img = name => new URL('assets/img/' + name + '.jpg', document.baseURI).href;
 
   $('#yr').textContent = new Date().getFullYear();

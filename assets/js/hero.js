@@ -126,6 +126,13 @@
     let dog = setTimeout(() => ctrl.abort(), 20000);
     const res = await fetch(url, { signal: ctrl.signal });
     if (!res.ok) throw new Error('video ' + res.status);
+    // with no ring to fill, the browser keeps the bytes itself: no chunk copies on the JS heap to collect
+    if (!ring || !ringFg || !res.body) {
+      clearTimeout(dog); dog = setTimeout(() => ctrl.abort(), 90000);
+      const blob = await res.blob();
+      clearTimeout(dog);
+      return URL.createObjectURL(new Blob([blob], { type: 'video/mp4' }));
+    }
     const total = Number(res.headers.get('Content-Length')) || bytes || 1;
     const reader = res.body.getReader();
     const chunks = [];
@@ -168,7 +175,9 @@
     stage.classList.remove('loading');
     requestSeek(shown * video.duration);
     kick(true);
-    if (!info.lite) return;
+    // the sharp copy only when the canvas is clearly wider than the light one (800px) and memory allows
+    const mem = navigator.deviceMemory, saveData = navigator.connection && navigator.connection.saveData;
+    if (!info.lite || W * DPR <= 920 || (mem && mem < 8) || saveData) return;
     try {
       const sharpUrl = await fetchBlob(info.src, info.bytes, false);
       const sharp = await makeVideo(sharpUrl);
@@ -176,10 +185,14 @@
         sharp.addEventListener('seeked', done, { once: true });
         sharp.currentTime = Math.min(shown * sharp.duration, sharp.duration - .04);
       });
+      const lite = video;
       video = sharp;
       seekBusy = false; pendingT = null;
       requestSeek(shown * video.duration);
       kick(true);
+      // let the light copy go: its decoder and its bytes
+      lite.removeAttribute('src'); lite.load();
+      URL.revokeObjectURL(first);
     } catch (e) { /* the light copy keeps playing */ }
   }
 
