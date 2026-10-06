@@ -119,8 +119,6 @@
     });
     window.addEventListener('pointerup', () => { down = false; vp.classList.remove('dragging'); });
     vp.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
-    // the page's smooth scroll must not eat sideways wheel or trackpad moves on the row
-    vp.setAttribute('data-lenis-prevent-wheel', '');
   })();
 
   /* ---------------- the scent finder ---------------- */
@@ -266,9 +264,7 @@
       const sp = SplitText.create(ideaText, { type: 'words', wordsClass: 'iw' });
       gsap.fromTo(sp.words, { opacity: .14 }, {
         opacity: 1, ease: 'none', stagger: .1,
-        scrollTrigger: wide
-          ? { trigger: '.idea', start: 'top top', end: '+=55%', scrub: true, pin: true }
-          : { trigger: ideaText, start: 'top 85%', end: 'bottom 45%', scrub: true }
+        scrollTrigger: { trigger: ideaText, start: 'top 85%', end: 'bottom 45%', scrub: true }
       });
     }
 
